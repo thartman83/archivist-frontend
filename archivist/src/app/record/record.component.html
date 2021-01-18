@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row"></div>
+  <div class="row">
+    <div class="col m-3">
+      <div class="card">
+	<div class="card-header">
+	  <h4>{{ record.name }}</h4>
+	  <span class="badge badge-light m-2">Tag 1</span>
+	  <span class="badge badge-light">Tag 2</span>
+	</div>
+      </div>
+    </div>    
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <app-metadata [record]='record'></app-metadata>
+    </div>
+    <div class="col-9">
+      <div class="row" *ngFor='let page of record.pages'>
+	<div class="col">
+	  <app-pages [page]='page'></app-pages>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
