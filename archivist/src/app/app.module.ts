@@ -9,6 +9,8 @@ import { MetadataComponent } from './record/metadata/metadata.component';
 import { PagesComponent } from './record/pages/pages.component';
 import { AddRecordComponent } from './add-record/add-record.component';
 
+import { Select2Module } from "ng-select2-component";
+
 const appRoute: Routes = [
 //  { path: 'home' },
   { path: 'record/:recordId', component: RecordComponent },
@@ -22,11 +24,12 @@ const appRoute: Routes = [
     RecordComponent,
     MetadataComponent,
     PagesComponent,
-    AddRecordComponent,
+    AddRecordComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoute)
+    RouterModule.forRoot(appRoute),
+    Select2Module
   ],
   providers: [],
   bootstrap: [AppComponent]

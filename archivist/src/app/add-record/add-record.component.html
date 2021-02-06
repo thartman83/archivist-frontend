@@ -1,1 +1,59 @@
-<p>add-record works!</p>
+<div class="container-fluid">
+  <div class="row mt-3">
+    <div class="col">
+      <div class="card m-3">
+	<div class="card-header">
+	  <h4>New Record</h4>
+	</div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <form>
+      <div class="row">
+	<div class="col">
+	  <!-- <div class="form-check"> -->
+	    <!--   <input class="form-check-input" name="recordType" id="uploadRecord" type="radio" value="Upload" data-toggle="collapse" data-target="#uploadField" /> -->
+	    <!--   <label class="form-check-label" for="uploadRecord">Upload new record -->
+	      <!--     <a href="#" data-toggle="collapse" data-target="#uploadField" ></a></label> -->
+	    <!-- </div>	 -->
+	  <!-- <div class="form-check"> -->
+	    <!--   <input class="form-check-input" name="recordType" id="scanRecord" type="radio" value="Upload" data-toggle="collapse" data-target="scanField" /> -->
+	    <!--   <label class="form-check-label" for="scanRecord">Scan new record</label> -->
+	    <!-- </div>  -->
+	  <div class="btn-group btn-group-toggle" data-toggle="buttons">	 
+	    <label class="btn btn-outline-secondary" for="uploadRecord">
+	      <input name="uploadRecord" id="uploadRecord" type="radio" value="upload" data-toggle="collapse" data-target="#uploadField"/>Upload Record</label>
+
+	    <label class="btn btn-outline-secondary" for="scanRecord">
+	      <input name="scanRecord" id="scanRecord" type="radio" value="scan" data-toggle="collapse" data-target="#scanField"/>Scan Record</label>
+	  </div>
+	</div>
+      </div>
+      <div class="row mt-3">
+	<div class="col">
+	  <div class="collapse" id="uploadField">
+	    <div class="form-group"> 	    
+	      <input class="file" name="recordName" type="file" value=""/>
+	    </div>
+	  </div>
+	  <div class="collapse" id="scanField">	    
+	  </div>
+	</div>
+      </div>
+      <div class="row mt-3">
+	<div class="col">
+	  <div class="form-group">
+	    <label for="tags">Tags</label>
+	    <select2>
+	      [value]="value",
+	      [material]="true",
+	      [multiple]=true,
+	      [data]="data"
+	    </select2>
+	  </div>
+	</div>
+      </div>
+    </form>
+  </div>
+</div>
